@@ -201,7 +201,7 @@ You can customize for your own setup. TFT, Baby Steps and a lot of cool stuff ar
 12. Put back the "v source" jumper to 5V.
 
 
-# Flashing Marlin JUST USING SD
+# Flashing Marlin JUST USING SD may NOT work since early 2021 due to Bootloader changes by Tronxy
 
 Thanks to the amazing work of J.C. Nelson, now we can just use Marlin updating directly from SD!!
 
@@ -218,15 +218,15 @@ Again, thanks to J.C. Nelson @xC000000
 
 ***If you already flashed Marlin the old way then you need restore your Chitu backup to use this method. This will make all your future installs easier.***
 
-# Flashing Marlin Firmware MANUALLY (OBSOLETE!)
+# Flashing Marlin Firmware MANUALLY 
 
-OBSOLETE! JUST USE THE FIRST METHOD.
+Now sometimes the only way - since Tronxy removed Bootloader on some boards around early 2021
 
 1. Turn off the printer
 2. Open the board case
 3. Remove the "boot" jumper (1) as the image.
 4. Change the V source jumper (2) from 5V to USB.
-5. Open [STM Cube Programmer](https://www.st.com/en/development-tools/stm32cubeprog.html) (linux, mac, windows) or [FLASHER-STM32](https://www.st.com/en/development-tools/flasher-stm32.html) (only windows)
+5. Open [STM Cube Programmer](https://www.st.com/en/development-tools/stm32cubeprog.html) (linux, mac, windows) 
 6. Flash the YOUR-MARLIN-DIR/.pio/build/chitu_f103/firmware.bin at 0x08000000
 7. After the Flash is done, put the back the boot jumper (1) and the V source jumper to 5V.
 8. Turn on the printer
